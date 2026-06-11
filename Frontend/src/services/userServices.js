@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL="http://localhost:3002/api/user/";
+const API_URL="https://expenseflow-backend-d0fm.onrender.com";
 
 const getToken=()=>{
   const user=JSON.parse(localStorage.getItem("user"));

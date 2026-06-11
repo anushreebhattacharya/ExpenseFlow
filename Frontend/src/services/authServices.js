@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL="http://localhost:3002/api/auth/";
+const API_URL= "https://expenseflow-backend-d0fm.onrender.com";
 
 export const registerUser=async(userData)=>{
   const response=await axios.post(API_URL+"register",userData);
