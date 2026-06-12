@@ -70,17 +70,17 @@ const Dashboard = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <SummaryCard
               title="Total Income"
-              amount={`₹${totalIncome}`}
+              amount={`${totalIncome}`}
             />
 
             <SummaryCard
               title="Total Expense"
-              amount={`₹${totalExpense}`}
+              amount={`${totalExpense}`}
             />
 
             <SummaryCard
               title="Balance"
-              amount={`₹${balance}`}
+              amount={`${balance}`}
             />
           </div>
 
