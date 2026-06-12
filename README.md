@@ -64,6 +64,10 @@ ExpenseFlow is a modern full-stack MERN Expense Tracker application that helps u
 
 * MongoDB Atlas
 
+###Deployment
+*Frontend -> Vercel
+*Backend -> Render
+*🌐Live link->https://expense-flow-iota.vercel.app/
 
 ## 📂 Project Structure
 
