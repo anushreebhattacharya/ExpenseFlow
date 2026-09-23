@@ -1,0 +1,29 @@
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: expenseflow-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: expenseflow-backend
+    ports:
+      - "3002:3002"
+    environment:
+      PORT: 3002
+      MONGO_URI: mongodb://mongodb:27017/expenseflow
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:7
+    container_name: expenseflow-mongodb
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -21,6 +21,6 @@ app.use('/api/user',require('./routes/userRoutes'));
 app.use(notFound);
 app.use(errorHandler);
 
-app.listen(3002 || process.env.PORT,()=>{
+app.listen(3002 || process.env.PORT, "0.0.0.0",()=>{
     console.log(`Server running at port ${3002 || process.env.PORT}`);
 })
