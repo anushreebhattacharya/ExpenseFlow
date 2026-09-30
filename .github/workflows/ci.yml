@@ -1,13 +1,10 @@
-name: ExpenseFlow CI
+name: Test and Build
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
 
 jobs:
   test-and-build:
@@ -22,18 +19,20 @@ jobs:
         with:
           node-version: 20
 
+      # Frontend Workflow
       - name: Install frontend dependencies
         working-directory: ./Frontend
-        run: npm ci
+        run: npm install
 
       - name: Build frontend
         working-directory: ./Frontend
-        run: npm run build
+        run: npm run build --if-present
 
+      # Backend Workflow
       - name: Install backend dependencies
         working-directory: ./Backend
-        run: npm ci
+        run: npm install
 
       - name: Test backend
         working-directory: ./Backend
-        run: npm test
+        run: npm test --if-present
